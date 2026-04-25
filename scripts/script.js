@@ -46,7 +46,6 @@ nextButton.addEventListener('click', () => {
     update(1)
 });
 
-// Reload ao clicar no logo
 const logo = document.getElementById('logo');
 logo.addEventListener('click', function(e) {
     if (window.location.pathname.endsWith('index.html') 
