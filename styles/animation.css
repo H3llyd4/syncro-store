@@ -1,0 +1,121 @@
+/* ========== PAGE TRANSITION ========== */
+body {
+    animation: pageFadeIn 0.8s ease forwards;
+    overflow: auto;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== NAVBAR ========== */
+header {
+    animation: slideDown 0.8s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== LOGO ========== */
+.logo {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* ========== NAV LINKS SEQUENCIAL ========== */
+nav a:nth-child(1) { animation: fadeIn 0.5s ease 0.2s forwards; opacity: 0; }
+nav a:nth-child(2) { animation: fadeIn 0.5s ease 0.4s forwards; opacity: 0; }
+nav a:nth-child(3) { animation: fadeIn 0.5s ease 0.6s forwards; opacity: 0; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== ANIMATE ON SCROLL ========== */
+.animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== CARDS CASCATA ========== */
+.product-card:nth-child(1) { transition-delay: 0.1s; }
+.product-card:nth-child(2) { transition-delay: 0.2s; }
+.product-card:nth-child(3) { transition-delay: 0.3s; }
+.product-card:nth-child(4) { transition-delay: 0.4s; }
+.product-card:nth-child(5) { transition-delay: 0.5s; }
+.product-card:nth-child(6) { transition-delay: 0.6s; }
+
+/* ========== HOVER CARD ========== */
+.product-card {
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 247, 255, 0.15);
+}
+
+
+/* ========== FORM FOCUS ========== */
+.form-input:focus,
+.form-textarea:focus {
+    animation: borderGlow 0.3s ease forwards;
+}
+
+@keyframes borderGlow {
+    from { box-shadow: 0 0 0px rgba(0, 247, 255, 0); }
+    to   { box-shadow: 0 0 10px rgba(0, 247, 255, 0.5); }
+}
+
+/* ========== ÍCONES BOUNCE ========== */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+}
+
+.contact-icon {
+    animation: bounce 2s infinite;
+}
+
+.contact-item:nth-child(1) .contact-icon { animation-delay: 0s; }
+.contact-item:nth-child(2) .contact-icon { animation-delay: 0.3s; }
+.contact-item:nth-child(3) .contact-icon { animation-delay: 0.6s; }
+
+/* ========== TÍTULO PÁGINAS ========== */
+.page-title {
+    animation: titleSlide 0.8s ease forwards;
+}
+
+@keyframes titleSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+        letter-spacing: 10px;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: normal;
+    }
+}
