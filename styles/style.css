@@ -12,6 +12,19 @@ body{
     color: #fff;
     font-size: 16px;
     overflow: hidden;
+    opacity: 0;
+    animation: pageReveal 0.9s ease-out forwards;
+}
+
+@keyframes pageReveal {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header{
@@ -23,6 +36,16 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 3;
+    opacity: 0;
+    transform: translateY(-16px);
+    animation: headerDropIn 0.8s ease-out 0.2s forwards;
+}
+
+@keyframes headerDropIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header a.logo {
@@ -252,6 +275,8 @@ header nav a:hover::after {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out 0.45s forwards;
 }
 
 .arrow-btn {
@@ -278,6 +303,19 @@ header nav a:hover::after {
     align-items: center;
     gap: 15px;
     z-index: 5;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out 0.55s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 
 .numbers {
@@ -355,7 +393,6 @@ header nav a:hover::after {
         transform: translate(0, 0) scale(1);
         border-color: rgba(0, 247, 255, 0.1);
     }
-    
 }
 
 @keyframes move-circle-4 {
