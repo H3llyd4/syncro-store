@@ -3,54 +3,63 @@ const nextButton = document.getElementById('next');
 const itens = document.querySelectorAll('.item');
 const dots = document.querySelectorAll('.dot');
 const numberIndicator = document.querySelector('.numbers');
-const list = document.querySelector('.list');
 
 let active = 0;
 const total = itens.length;
 let timer;
 
 function update(direction) {
-    document.querySelector('.item.active').classList.remove('active');
-    document.querySelector('.dot.active').classList.remove('active');
+    const activeItem = document.querySelector('.item.active');
+    const activeDot = document.querySelector('.dot.active');
 
-    if(direction > 0) {
-        active++
-        if(active === total) {
-            active = 0
+    if (!activeItem || !activeDot || total === 0 || dots.length === 0 || !numberIndicator) {
+        return;
+    }
+
+    activeItem.classList.remove('active');
+    activeDot.classList.remove('active');
+
+    if (direction > 0) {
+        active++;
+        if (active === total) {
+            active = 0;
         }
     } else if (direction < 0) {
-        active--
-        if(active < 0) {
-            active = total - 1
+        active--;
+        if (active < 0) {
+            active = total - 1;
         }
     }
 
-    itens[active].classList.add('active');
-    dots[active].classList.add('active');
-
-    numberIndicator.textContent = String(active + 1).padStart(2, '0')
-
+    if (itens[active] && dots[active]) {
+        itens[active].classList.add('active');
+        dots[active].classList.add('active');
+        numberIndicator.textContent = String(active + 1).padStart(2, '0');
+    }
 }
 
-clearInterval(timer);
-timer = setInterval(() => {
-        update(1)
-}, 5000);
+if (total > 0 && dots.length > 0 && numberIndicator && prevButton && nextButton) {
+    clearInterval(timer);
+    timer = setInterval(() => {
+        update(1);
+    }, 5000);
 
+    prevButton.addEventListener('click', () => {
+        update(-1);
+    });
 
-prevButton.addEventListener('click', () => {
-    update(-1)
-});
-
-nextButton.addEventListener('click', () => {
-    update(1)
-});
+    nextButton.addEventListener('click', () => {
+        update(1);
+    });
+}
 
 const logo = document.getElementById('logo');
-logo.addEventListener('click', function(e) {
-    if (window.location.pathname.endsWith('index.html') 
-    || window.location.pathname === '/') {
-        e.preventDefault();
-        location.reload();
-    }
-});
+if (logo) {
+    logo.addEventListener('click', function (e) {
+        if (window.location.pathname.endsWith('index.html')
+            || window.location.pathname === '/') {
+            e.preventDefault();
+            location.reload();
+        }
+    });
+}
