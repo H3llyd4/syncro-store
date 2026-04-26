@@ -1,14 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="theme-color" content="#0f0f1e">
+    <title>Contato | Syncro Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/contato.css">
 </head>
 <body>
-    
+    <header>
+        <a href="index.html" class="logo" id="logo">
+            <span>Syncro</span> Store
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html" class="active-link">Contato</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="hero-tag">Atendimento Premium</p>
+            <h1 class="hero-title">Fale com a <span>Syncro Store</span></h1>
+            <p class="hero-subtitle">
+                Tire dúvidas, solicite suporte ou envie sugestões. Nossa equipe responde rapidamente para oferecer a melhor experiência.
+            </p>
+        </section>
+
+        <section class="contact-grid">
+            <article class="contact-card">
+                <div class="card-icon">✉</div>
+                <h2>Email</h2>
+                <p>contato@syncrostore.com</p>
+                <small>Resposta em até 24h úteis</small>
+            </article>
+
+            <article class="contact-card">
+                <div class="card-icon">☎</div>
+                <h2>Telefone</h2>
+                <p>(11) 4002-8922</p>
+                <small>Seg a Sex, 9h às 18h</small>
+            </article>
+
+            <article class="contact-card">
+                <div class="card-icon">⌂</div>
+                <h2>Endereço</h2>
+                <p>Av. Tecnologia, 1024 - São Paulo/SP</p>
+                <small>Visitas com agendamento</small>
+            </article>
+        </section>
+
+        <section class="form-section">
+            <h2>Envie sua mensagem</h2>
+            <form id="contactForm" novalidate>
+                <div class="input-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome completo" required>
+                    <span class="error-message" data-error-for="name"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="voce@email.com" required>
+                    <span class="error-message" data-error-for="email"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="(11) 99999-9999" maxlength="15">
+                    <span class="error-message" data-error-for="phone"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="subject">Assunto</label>
+                    <input type="text" id="subject" name="subject" class="form-input" placeholder="Ex: Dúvida sobre produto" required>
+                    <span class="error-message" data-error-for="subject"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Como podemos ajudar?" required></textarea>
+                    <span class="error-message" data-error-for="message"></span>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar mensagem</button>
+                <p id="formStatus" class="form-status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2026 <span>Syncro Store</span>. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="./scripts/contato.js"></script>
 </body>
 </html>

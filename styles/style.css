@@ -48,15 +48,19 @@ header{
     }
 }
 
-header a.logo {
+.logo {
     font-family: "Orbitron", sans-serif;
     font-size: 2rem;
     padding-left: 20px;
     font-weight: 900;
-    color: #00f7ff;
-    text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+    color: #fff;
+    text-shadow: 0 0 12px rgba(0, 247, 255, 0.5);
     cursor: pointer;
     text-decoration: none;
+}
+
+.logo span {
+    color: #00f7ff;
 }
 
 header nav {
