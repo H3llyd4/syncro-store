@@ -57,3 +57,28 @@ if (filterBtns.length > 0 && productCards.length > 0) {
         });
     });
 }
+
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('header nav');
+const navLinks = document.querySelectorAll('header nav a');
+
+if (menuToggle && nav) {
+    menuToggle.addEventListener('click', () => {
+        const isOpen = document.body.classList.toggle('menu-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            document.body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1024) {
+            document.body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+}
