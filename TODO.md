@@ -1,0 +1,5 @@
+- [x] Criar `styles/responsive.css` com media queries globais para home, produtos e contato
+- [x] Adicionar `<link rel="stylesheet" href="./styles/responsive.css">` em `index.html`
+- [x] Adicionar `<link rel="stylesheet" href="./styles/responsive.css">` em `produtos.html`
+- [x] Adicionar `<link rel="stylesheet" href="./styles/responsive.css">` em `contato.html`
+- [x] Revisar e concluir checklist no `TODO.md`
