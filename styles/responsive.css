@@ -307,7 +307,7 @@
 
     .arrows {
         top: auto;
-        bottom: 88px;
+        bottom: 100px;
         width: 92%;
         transform: translateX(-50%);
     }
@@ -318,7 +318,7 @@
     }
 
     .indicators {
-        bottom: 18px;
+        bottom: 30px;
         gap: 8px;
     }
 

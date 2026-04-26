@@ -92,7 +92,7 @@ header nav a:hover::after {
 }
 
 .container {
-    height: 100vh;
+    height: 100dvh;
     position: relative;
     background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a 100%);
     overflow: hidden;
