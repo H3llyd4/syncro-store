@@ -1,15 +1,19 @@
 body {
-    position: fixed;
+    position: relative;
+    width: 100%;
     overflow-x: hidden;
 }
 
 main {
     z-index: 0;
     width: 100vw;
+    overflow-x: hidden;
 }
 
-.container {
-    position: static;
+.container-products {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
     z-index: 1;
     overflow-y: auto;
 }

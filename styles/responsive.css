@@ -342,6 +342,12 @@
         position: static;
     }
 
+    .container-products {
+        height: auto;
+        width: 100%;
+        padding-top: 80px;
+    }
+
     .products-hero {
         padding: 1rem 1rem 1rem;
     }
