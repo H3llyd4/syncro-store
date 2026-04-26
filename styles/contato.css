@@ -26,7 +26,7 @@ body {
     color: var(--text);
     min-height: 100vh;
     opacity: 0;
-    animation: pageFade 0.8s ease forwards;
+    animation: pageFade 0.9s ease forwards;
 }
 
 @keyframes pageFade {
@@ -41,28 +41,23 @@ body {
 }
 
 header {
-    position: sticky;
+    position: fixed;
+    width: 90vw;
     top: 0;
-    z-index: 15;
-    width: min(1200px, 92%);
-    margin: 18px auto 0;
-    padding: 14px 20px;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    background: rgba(15, 15, 30, 0.72);
-    backdrop-filter: blur(8px);
+    padding: 20px 70px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    z-index: 15;
 }
 
 .logo {
     text-decoration: none;
     color: var(--text);
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 900;
     font-family: "Orbitron", sans-serif;
-    text-shadow: 0 0 12px rgba(0, 247, 255, 0.35);
+    text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
 }
 
 .logo span {
@@ -71,41 +66,39 @@ header {
 
 nav {
     display: flex;
-    gap: 28px;
+    gap: 48px;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--text-soft);
-    font-weight: 600;
+    color: inherit;
+    font-weight: 500;
     position: relative;
+    padding: 5px 0;
     transition: color 0.25s ease;
 }
 
-nav a:hover,
-nav a.active-link {
-    color: var(--accent);
-}
 
 nav a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: 0px;
     width: 0;
     height: 2px;
     background: var(--accent);
-    transition: width 0.3s ease;
+    transition: width 0.6s ease;
 }
 
-nav a:hover::after,
-nav a.active-link::after {
+nav a:hover::after {
     width: 100%;
 }
 
 .container {
+    min-height: 100vh;
     width: min(1200px, 92%);
-    margin: 30px auto 60px;
+    margin: 20px auto 60px;
+    padding: 100px 0 20px;
     display: grid;
     gap: 28px;
 }
@@ -305,12 +298,18 @@ footer span {
 
 @media (max-width: 940px) {
     header {
+        width: 94vw;
+        padding: 16px 24px;
         flex-direction: column;
         gap: 10px;
     }
 
     nav {
         gap: 16px;
+    }
+
+    .container {
+        margin-top: 150px;
     }
 
     .contact-grid {
