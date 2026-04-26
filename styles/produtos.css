@@ -139,3 +139,21 @@ main {
     text-transform: uppercase;
     font-family: 'Orbitron', sans-serif;
 }
+
+.btn-pulse {
+    padding: 12px 16px;
+    background: linear-gradient(90deg, #00f7ff, #0066ff);
+    border-radius: 30px;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-pulse:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.6);
+}
