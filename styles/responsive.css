@@ -396,6 +396,12 @@
         width: min(1200px, 95%);
         margin: 0 auto 26px;
         padding-top: 90px;
+        
+    }
+    .container-contact {
+        width: min(1200px, 95%);
+        margin: 0 auto 26px;
+        padding-top: 90px;
         height: auto;
     }
 
